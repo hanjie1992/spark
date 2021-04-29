@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>kmeans</title>
+<style type="text/css">
+html{height:100%}
+body{height:100%;margin:0px;padding:0px}
+#container{height:100%}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=rvCniIsgReAWjvnr6KzCl09DiV3bBfgV">
+</script>
+</head>
+
+<body>
+<div id="container"></div>
+<script type="text/javascript">
+var map = new BMap.Map("container");
+map.enableScrollWheelZoom();
+map.addControl(new BMap.NavigationControl());
+map.addControl(new BMap.ScaleControl());
+var myP1 = new BMap.Point(104.088050401,30.6461552);
+var myP2 = new BMap.Point(103.89418873,30.89418873);
+var myP3 = new BMap.Point(104.01765079,30.65644259);
+map.centerAndZoom(myP1 , 15);
+map.clearOverlays();
+var marker1 = new BMap.Marker(myP1);
+var marker2 = new BMap.Marker(myP2);
+var marker3 = new BMap.Marker(myP3);
+map.addOverlay(marker1);
+map.addOverlay(marker2);
+map.addOverlay(marker3);
+</script>
+</body>
+</html>
