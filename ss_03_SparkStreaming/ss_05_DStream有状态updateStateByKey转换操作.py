@@ -8,6 +8,7 @@ conf.setMaster('local[2]')
 sc = SparkContext(conf=conf)
 ssc = StreamingContext(sc, 10)
 ssc.checkpoint("data")
+
 # RDD with initial state (key, value) pairs
 initialStateRDD = sc.parallelize([(u'hello', 1), (u'world', 1)])
 def updateFunc(new_values, last_sum):
